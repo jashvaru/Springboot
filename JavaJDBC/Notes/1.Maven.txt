@@ -1,0 +1,13 @@
+-Maven is a Project Management Tool
+-Maven can help to do
+    -To build a project you need to follow certain steps compile->run->test->package->deploy steps using plugin
+    -To build a project you will need 3rd party libraries and need to maintain the version of it
+        -Example Hibernate need to download multiple JAR files as it is dependent on other libraries ]
+        This is known as Transitive Dependencies
+-When you add maven to your project it will a structure that it follows. It has a pom.xml file
+pom stands for Project Object Model. It will xml code to package our project.
+-You can directly get xml maven code from Google to add dependency to your project
+-Maven have a concept of effective pom. While executing it will read xml added from the effective pom
+-If you don't want to write pom.xml from scratch we can make use of maven Arch Type. Arch type are predefined/user created templates
+-By default maven will try to search for dependency in .m2 folder if it does not find there it will go to maven central
+and download that dependency. Ideally big companies have their own set of dependencies for safety and which are not vulnerable.

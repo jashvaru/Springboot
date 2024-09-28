@@ -1,0 +1,10 @@
+JDBC is an API(Application programming interface) used in Java programming to interact with databases
+
+To setup JDBC with java we have 7 steps
+1.import packages - we need to import java.sql package to use JDBC
+2.Load Driver - we need a JAR file specific to DB we are connecting
+3.Register Driver - we need to register our driver
+4.Create connection - establish a connection with the DB to perform CRUD operations
+5.Create statement - create the SQL query that you want to execute
+6.Execute statement - fire the SQL query
+7.Close connect - once your work is done make sure to close the connection to prevent connection leak

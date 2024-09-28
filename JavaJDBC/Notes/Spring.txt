@@ -1,0 +1,17 @@
+Spring Docs - https://docs.spring.io/spring-framework/reference/index.html
+
+For Spring we need to understand two concepts
+IoC(Inverstion of Control)
+- It means letting a framework or external system manage the flow and creation of objects in your
+program, instead of you doing it manually.
+- Think of it like hiring someone to cook for you—you just tell them what you want, and they handle the rest!
+- To achieve this spring have IoC container that takes care of all the object creation and destruction.
+All the objects are inside this container. Spring is responsible for creating Objects.
+
+DI(Dependency Injection)
+- Dependency Injection (DI) is a way to give an object its needed dependencies without the object having to
+create them itself.
+-It’s like someone handing you the ingredients to make a sandwich, instead of you having to go to the store and
+buy them yourself!
+-DI allows you to inject the required dependencies (like Engine) into your class (like Car) from outside, making
+the code more flexible, maintainable, and testable.
