@@ -69,4 +69,5 @@ public class SpringbootFrameworkApplication {
 }
 
 Now the student bean will be managed by spring
+-When we say get bean spring is injecting the bean of student in main class this is called as dependency injection
 
