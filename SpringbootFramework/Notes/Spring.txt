@@ -15,3 +15,58 @@ create them itself.
 buy them yourself!
 -DI allows you to inject the required dependencies (like Engine) into your class (like Car) from outside, making
 the code more flexible, maintainable, and testable.
+
+-----------------------------------------------------------------------------------------------------------------------------
+Springboot learning IoC and DI using code
+
+example 1 - Manually creating a bean(obj) and calling its method
+public static void main(String[] args) {
+		SpringApplication.run(SpringbootFrameworkApplication.class, args);
+		System.out.println("Hello world");
+		Student student = new Student();
+		student.print();
+	}
+SpringApplication.run(SpringbootFrameworkApplication.class, args);
+-It activates the spring frame work and it has container
+-run returns application context obj using which we can get the bean created in the container
+
+example 2 - Using Application context to get the bean that is automatically created in the IoC container
+
+public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(SpringbootFrameworkApplication.class, args);
+		Student student = context.getBean(Student.class);
+		student.print();
+	}
+
+Exception in thread "main" org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.jash.component.Student' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:334)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1261)
+	at org.jash.app.SpringbootFrameworkApplication.main(SpringbootFrameworkApplication.java:13)
+
+-But I got above error why? I should get the bean that is automatically created correct because spring is responsible for returning object??
+-Well spring does not automatically creates bean for all the classes that we write in the code.
+we need to inform spring the classes for which we need spring to create beans
+
+example 3 - Now to inform spring we need to add @Component annotation of spring so that it can manage the creation of the bean
+@Component
+public class Student {
+    public void print() {
+        System.out.println("I am student");
+    }
+}
+
+and in main since its in a diff package than main class we need to add @ComponentScan({"org.jash.component"})
+@SpringBootApplication
+@ComponentScan({"org.jash.component"})
+public class SpringbootFrameworkApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(SpringbootFrameworkApplication.class, args);
+		Student student = context.getBean(Student.class);
+		student.print();
+	}
+}
+
+Now the student bean will be managed by spring
+
