@@ -1,3 +1,9 @@
 -@SpringBootApplication
 -@ComponentScan - We mark a class with this annotation
 -@Component - mark classes as component for which you want spring to handle its obj creations and destruction
+-@Autowired - The @Autowired annotation in Spring is used for dependency injection, where Spring automatically injects an
+    instance of the required dependency into a class. When you annotate a field, constructor, or setter method with
+    @Autowired, Spring looks for a bean that matches the dependency's type and injects it at runtime. This makes it
+    easier to manage dependencies between classes without needing to manually instantiate them.
+-@Primary - If there are multiple beans of the same type, you can specify which one to inject using @Primary on the bean with @Autowired.
+-@Qualifier - If there are multiple beans of the same type, you can specify which one to inject @Qualifier with @Autowired.
