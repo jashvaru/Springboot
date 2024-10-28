@@ -1,0 +1,3 @@
+-@SpringBootApplication
+-@ComponentScan - We mark a class with this annotation
+-@Component - mark classes as component for which you want spring to handle its obj creations and destruction
