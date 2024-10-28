@@ -3,3 +3,5 @@ There are way to configure spring projects
 
 -xml
 -In this project we will be creating spring project with xml configuration of the spring bean
+-ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+    when above line of code executes it checks the classes mentioned in xml and creates bean for the classes.
