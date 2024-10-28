@@ -5,3 +5,11 @@ There are way to configure spring projects
 -In this project we will be creating spring project with xml configuration of the spring bean
 -ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
     when above line of code executes it checks the classes mentioned in xml and creates bean for the classes.
+
+Scope of Beans in Spring
+-Singleton
+-Prototype
+
+-At the time when spring loads the application context only beans with scope as singleton will get created and it can be
+used anywhere in the code.
+-Bean with scope as prototype will get created at the time of getBean() and not on the load of application context
