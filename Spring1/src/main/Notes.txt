@@ -11,5 +11,5 @@ Scope of Beans in Spring
 -Prototype
 
 -At the time when spring loads the application context only beans with scope as singleton will get created and it can be
-used anywhere in the code.
+used anywhere in the code. The object will be created when container is loading.
 -Bean with scope as prototype will get created at the time of getBean() and not on the load of application context
