@@ -1,0 +1,5 @@
+There are way to configure spring projects
+-xml -java code -annotations
+
+-xml
+-In this project we will be creating spring project with xml configuration of the spring bean
