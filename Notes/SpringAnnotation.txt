@@ -5,10 +5,13 @@
     instance of the required dependency into a class. When you annotate a field, constructor, or setter method with
     @Autowired, Spring looks for a bean that matches the dependency's type and injects it at runtime. This makes it
     easier to manage dependencies between classes without needing to manually instantiate them.
--@Primary - If there are multiple beans of the same type, you can specify which one to inject using @Primary on the bean with @Autowired.
+-@Primary - If there are two beans of the same type, you can specify which one to inject using @Primary on the bean with @Autowired.
 -@Qualifier - If there are multiple beans of the same type, you can specify which one to inject @Qualifier with @Autowired.
 
 Java Based Configuration
 -@Configuration - Marks a class as a source of bean definitions, which Spring will process to manage dependency injection.
 -@Bean - Declares a method that will return an object to be managed as a Spring bean within the application context.
 -@Scope - By default singleton and we can pass scope type @Bean("prototype")
+
+-@Value - Is used to inject values directly into fields, methods, or constructor parameters from external sources,
+such as properties files, environment variables, or inline expressions
