@@ -7,5 +7,5 @@
     easier to manage dependencies between classes without needing to manually instantiate them.
 -@Primary - If there are multiple beans of the same type, you can specify which one to inject using @Primary on the bean with @Autowired.
 -@Qualifier - If there are multiple beans of the same type, you can specify which one to inject @Qualifier with @Autowired.
--@Configuration -
--@Bean
+-@Configuration - Marks a class as a source of bean definitions, which Spring will process to manage dependency injection.
+-@Bean - Declares a method that will return an object to be managed as a Spring bean within the application context.
