@@ -6,7 +6,7 @@
 
     <!-- bean definitions here -->
 <!--    <bean id="alien" class="com.jash.Alien"></bean>-->
-    <bean id="alien" class="com.jash.Alien">
+    <bean id="alien" class="com.jash.Alien" scope="prototype">
         <property name="age" value="21"></property>
     </bean>
 
