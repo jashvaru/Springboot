@@ -7,3 +7,5 @@
     easier to manage dependencies between classes without needing to manually instantiate them.
 -@Primary - If there are multiple beans of the same type, you can specify which one to inject using @Primary on the bean with @Autowired.
 -@Qualifier - If there are multiple beans of the same type, you can specify which one to inject @Qualifier with @Autowired.
+-@Configuration -
+-@Bean
