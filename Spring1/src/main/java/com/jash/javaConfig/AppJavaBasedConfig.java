@@ -16,7 +16,7 @@ public class AppJavaBasedConfig
     {
         System.out.println( "Java Based Config" );
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        Alien alien = (Alien) applicationContext.getBean(Alien.class);
+        Alien alien = (Alien) applicationContext.getBean("bhoot",Alien.class);
         System.out.println(alien.getAge());
     }
 
