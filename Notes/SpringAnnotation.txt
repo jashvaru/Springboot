@@ -1,5 +1,9 @@
--@SpringBootApplication
--@ComponentScan - We mark a class with this annotation
+-@SpringBootApplication - annotation is a core annotation in Spring Boot that is used to mark the main class of a Spring
+Boot application. This annotation serves as a convenient combination of three other annotations, enabling quick and easy
+configuration: @Configuration, @EnableAutoConfiguration, @ComponentScan.
+
+-@ComponentScan - We mark the main configuration class with this annotation and provide path where we need spring to
+scan components for bean creation.
 -@Component - mark classes as component for which you want spring to handle its obj creations and destruction
 -@Autowired - The @Autowired annotation in Spring is used for dependency injection, where Spring automatically injects an
     instance of the required dependency into a class. When you annotate a field, constructor, or setter method with
@@ -7,6 +11,9 @@
     easier to manage dependencies between classes without needing to manually instantiate them.
 -@Primary - If there are two beans of the same type, you can specify which one to inject using @Primary on the bean with @Autowired.
 -@Qualifier - If there are multiple beans of the same type, you can specify which one to inject @Qualifier with @Autowired.
+-@EnableAutoConfiguration - This enables Spring Boot’s auto-configuration feature, which automatically configures your
+application based on the dependencies present in the classpath. For example, if you have spring-boot-starter-web on the
+classpath, it will automatically set up a Spring MVC application.
 
 Java Based Configuration
 -@Configuration - Marks a class as a source of bean definitions, which Spring will process to manage dependency injection.
