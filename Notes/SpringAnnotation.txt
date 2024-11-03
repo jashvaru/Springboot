@@ -22,3 +22,11 @@ Java Based Configuration
 
 -@Value - Is used to inject values directly into fields, methods, or constructor parameters from external sources,
 such as properties files, environment variables, or inline expressions
+
+Spring Stereotype annotations
+-@Service - is used to mark a class as a service layer component. This annotation serves to indicate that the class
+contains business logic, which typically handles the core processing and transactional operations of an application.
+Classes annotated with @Service are detected during component scanning, making them Spring beans that are automatically
+registered in the Spring application context.
+-@Repository - is used to mark a class as a data access layer component, which deals with database interactions.
+This makes the class eligible for Spring’s component scanning.
