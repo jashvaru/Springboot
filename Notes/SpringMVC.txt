@@ -1,0 +1,8 @@
+MVC stands for Model-View-Controller, a software design pattern commonly used for developing user interfaces and structuring
+web applications. MVC divides an application into three interconnected components, promoting a clean separation of concerns
+that makes the application more modular, maintainable, and testable.
+
+Components of MVC
+Model: The Model represents the data and business logic of the application.
+View: The View is the UI layer that presents data to the user.
+Controller: The Controller acts as an intermediary between the Model and the View.
