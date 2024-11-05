@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff38154-34d2-47a1-b7b8-88648437707e" name="Changes" comment="Configured servlet mapping and called service method">
+    <list default="true" id="9ff38154-34d2-47a1-b7b8-88648437707e" name="Changes" comment="Sending response to the http get req. sending response of type text/html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jash/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jash/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/jash/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jash/HelloServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730689543503</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sending response to the http get req. sending response of type text/html">
+      <created>1730690914766</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730690914766</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created a Java project with Servlet and Embedded Tomcat" />
     <MESSAGE value="Configured servlet mapping and called service method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configured servlet mapping and called service method" />
+    <MESSAGE value="Sending response to the http get req. sending response of type text/html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sending response to the http get req. sending response of type text/html" />
   </component>
 </project>
