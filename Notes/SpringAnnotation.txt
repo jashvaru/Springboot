@@ -30,3 +30,4 @@ Classes annotated with @Service are detected during component scanning, making t
 registered in the Spring application context.
 -@Repository - is used to mark a class as a data access layer component, which deals with database interactions.
 This makes the class eligible for Spring’s component scanning.
+-@Controller - is use to mark the class as a controller, meaning it can map HTTP requests to specific methods.
