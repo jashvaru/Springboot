@@ -31,3 +31,17 @@ registered in the Spring application context.
 -@Repository - is used to mark a class as a data access layer component, which deals with database interactions.
 This makes the class eligible for Spring’s component scanning.
 -@Controller - is use to mark the class as a controller, meaning it can map HTTP requests to specific methods.
+
+org.springframework.web.bind.annotation
+@RequestMapping - In Spring Boot is used to map HTTP requests to specific handler methods in your controllers. It is a
+versatile annotation that can be used at both the class and method levels to define the URL path, request method, and
+other request properties.
+@GetMapping
+@PostMapping
+@PutMapping
+@DeleteMapping
+
+@RequestParam
+@PathVariable
+@RequestBody
+
