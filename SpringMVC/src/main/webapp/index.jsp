@@ -7,7 +7,7 @@
     </body>
         <h2>Telusko Calculator</h2>
 
-         <form action="add">
+         <form action="mul">
                 <label for="num1">Enter 1st Number :</label>
                 <input type="text" id=num1" name="num1"><br>
                 <label for="num2">Enter 2nd Number :</label>
