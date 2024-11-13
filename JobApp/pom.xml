@@ -53,6 +53,7 @@
 			<version>10.1.30</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.webjars.bower/jquery -->
 		<dependency>
 			<groupId>jakarta.servlet.jsp.jstl</groupId>
 			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
