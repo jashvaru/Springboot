@@ -30,7 +30,11 @@ Classes annotated with @Service are detected during component scanning, making t
 registered in the Spring application context.
 -@Repository - is used to mark a class as a data access layer component, which deals with database interactions.
 This makes the class eligible for Spring’s component scanning.
--@Controller - It is use to mark the class as a controller, meaning it can map HTTP requests to specific methods.
+-@Controller - It is use to mark the class as a controller, meaning it can map HTTP requests to specific methods and
+return data in view format (.jsp)
+-@ResponseBody - It is used to indicate that the return value of a method should be written directly to the HTTP response
+body as JSON format, rather than being treated as a view name or path for rendering.
+-@RestController - Its combination of @Controller and @ResponseBody
 
 org.springframework.web.bind.annotation
 @RequestMapping - In Spring Boot is used to map HTTP requests to specific handler methods in your controllers. It is a
