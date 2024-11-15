@@ -46,8 +46,11 @@ other request properties.
 @DeleteMapping
 
 @RequestParam
-@PathVariable
-@RequestBody
+@PathVariable - The @PathVariable annotation in Spring is used to extract values from the URI path and bind them directly
+to method parameters in a controller. It’s commonly used in RESTful applications where parts of the URL path represent
+resource identifiers, making it ideal for accessing dynamic data directly from URLs.
+@RequestBody - The @RequestBody annotation in Spring is used to bind the HTTP request body to a Java object. It allows
+you to directly map JSON, XML, or other formats in the request body into a Java object for easier handling
 
 @ModelAttribute - It is used to bind a method parameter or a method return value to a named model attribute, which can
 then be accessed in a view (like a JSP or Thymeleaf template). It's an optional attribute because Spring will try to bind
