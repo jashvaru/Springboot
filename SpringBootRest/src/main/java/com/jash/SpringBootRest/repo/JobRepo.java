@@ -1,6 +1,6 @@
-package com.jash.JobApp.repo;
+package com.jash.SpringBootRest.repo;
 
-import com.jash.JobApp.model.JobPost;
+import com.jash.SpringBootRest.model.JobPost;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
