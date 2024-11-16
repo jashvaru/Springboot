@@ -56,3 +56,5 @@ you to directly map JSON, XML, or other formats in the request body into a Java 
 then be accessed in a view (like a JSP or Thymeleaf template). It's an optional attribute because Spring will try to bind
 request parameters to this complex object using the names of its fields.
 
+@CrossOrigin - It is an annotation in Spring Framework used to enable CORS for your application. It allows you to specify
+which origins are permitted to access the APIs.
