@@ -28,4 +28,24 @@ public class JobRepo {
     public List<JobPost> getAllJobPost() {
         return jobPosts;
     }
+
+    public void deleteJobPost(int postId) {
+        jobPosts.removeIf(jp -> postId == jp.getPostId());
+    }
+
+    public void updateJobPost(JobPost jobPost) {
+        for (JobPost jp : jobPosts) {
+            if(jobPost.getPostId() == jp.getPostId()) {
+                jp.setPostProfile(jobPost.getPostProfile());
+            }
+        }
+    }
+
+    public JobPost getJobPost(int postId) {
+        for(JobPost jobPost : jobPosts) {
+            if(postId == jobPost.getPostId())
+                return jobPost;
+        }
+        return null;
+    }
 }
