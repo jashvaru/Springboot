@@ -71,3 +71,7 @@ public class SpringbootFrameworkApplication {
 Now the student bean will be managed by spring
 -When we say get bean spring is injecting the bean of student in main class this is called as dependency injection
 
+ORM (Object-Relational Mapping) is a programming technique used to interact with relational databases by mapping database
+tables to classes and table rows to objects. ORM abstracts database operations into code-level objects, allowing developers
+to work with database data using object-oriented paradigms rather than raw SQL.
+
