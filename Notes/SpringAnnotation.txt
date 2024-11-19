@@ -58,3 +58,8 @@ request parameters to this complex object using the names of its fields.
 
 @CrossOrigin - It is an annotation in Spring Framework used to enable CORS for your application. It allows you to specify
 which origins are permitted to access the APIs.
+
+org.springframework.data.jpa.repository
+@Query - annotation in Spring Data JPA is used to define custom JPQL (Java Persistence Query Language) or SQL queries
+directly within a repository interface method. It provides a way to override the default query derivation mechanism and
+create more complex or specific queries.

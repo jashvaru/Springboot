@@ -33,7 +33,10 @@ public class SpringDataJpaApplication {
 		studentRepo.save(s3);*/
 
 		/*System.out.println(studentRepo.findAll())*/;
-		System.out.println(studentRepo.findById(2));
+		/*System.out.println(studentRepo.findById(2));*/
+
+		System.out.println(studentRepo.findByName("J"));
+
 	}
 
 }
