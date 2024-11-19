@@ -44,7 +44,12 @@ public class SpringDataJpaApplication {
 		s2.setName("K");
 		s2.setMarks(100);
 
+		s1.setRollNo(1);
+		s1.setName("J");
+		s1.setMarks(10);
+
 		studentRepo.save(s2);
+		studentRepo.delete(s1);
 
 
 	}
