@@ -37,8 +37,15 @@ public class SpringDataJpaApplication {
 
 		/*System.out.println(studentRepo.findByName("J"));*/
 
-		System.out.println(studentRepo.findByMarks(30));
-		System.out.println(studentRepo.findByMarksGreaterThan(11));
+		/*System.out.println(studentRepo.findByMarks(30));
+		System.out.println(studentRepo.findByMarksGreaterThan(11));*/
+
+		s2.setRollNo(2);
+		s2.setName("K");
+		s2.setMarks(100);
+
+		studentRepo.save(s2);
+
 
 	}
 
