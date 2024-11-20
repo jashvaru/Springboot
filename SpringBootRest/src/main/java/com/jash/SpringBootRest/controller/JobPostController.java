@@ -51,4 +51,9 @@ public class JobPostController {
         return jobPostService.getAllJobs();
     }
 
+    @GetMapping(value = "/load")
+    public String loadJobPosts() {
+        jobPostService.loadAll();
+        return "success";
+    }
 }
