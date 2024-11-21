@@ -60,6 +60,18 @@ request parameters to this complex object using the names of its fields.
 which origins are permitted to access the APIs.
 
 org.springframework.data.jpa.repository
+@Entity -It is used to mark a class as a JPA entity, meaning it maps to a table in a relational database. It allows the
+class to be managed by a JPA provider (like Hibernate) and defines that its instances can be persisted to and retrieved
+from the database.
+@GeneratedValue - It is used with the @Id annotation to specify how the primary key value of an entity should be automatically
+generated. This annotation is part of the Java Persistence API (JPA) and is commonly used with ORM frameworks like Hibernate.
+@Table - Specifies table details (name, schema, catalog).
+@Id - Marks the primary key field.
+@GeneratedValue - Specifies the primary key generation strategy.
+@Column - Customizes column mapping for fields.
+@Transient - Marks a field as non-persistent (not mapped to a database column).
+@Embeddable - Indicates that a class can be embedded in an entity.
+
 @Query - annotation in Spring Data JPA is used to define custom JPQL (Java Persistence Query Language) or SQL queries
 directly within a repository interface method. It provides a way to override the default query derivation mechanism and
 create more complex or specific queries.
