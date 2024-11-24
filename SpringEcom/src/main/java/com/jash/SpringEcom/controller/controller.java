@@ -3,8 +3,10 @@ package com.jash.SpringEcom.controller;
 import com.jash.SpringEcom.model.Product;
 import com.jash.SpringEcom.repo.ProductRepo;
 import com.jash.SpringEcom.service.ProductService;
+import jdk.jfr.ContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -54,6 +56,16 @@ public class controller {
             return new ResponseEntity<>(product, HttpStatus.CREATED);
         } catch (IOException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping(value = "/product/image/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
+    public ResponseEntity<byte[]> fetchImgByProductId(@PathVariable("id") int productId) {
+        Product product = productService.fetchProductById(productId).orElse(null);
+        if(Objects.nonNull(product)) {
+            return new ResponseEntity<>(product.getImageData(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 }
