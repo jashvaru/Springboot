@@ -36,6 +36,10 @@ return data in view format (.jsp)
 body as JSON format, rather than being treated as a view name or path for rendering.
 -@RestController - Its combination of @Controller and @ResponseBody
 
+org.springframework.http
+@ResponseEntity is a class that represents the entire HTTP response, including the status code, headers,
+and body. It is a flexible and powerful way to customize and control the HTTP response sent from a Spring controller.
+
 org.springframework.web.bind.annotation
 @RequestMapping - In Spring Boot is used to map HTTP requests to specific handler methods in your controllers. It is a
 versatile annotation that can be used at both the class and method levels to define the URL path, request method, and
@@ -45,12 +49,15 @@ other request properties.
 @PutMapping
 @DeleteMapping
 
-@RequestParam
+@RequestParam - It is used to extract query parameters from the URL of an HTTP request and bind them to method parameters
+in a controller. It is typically used in RESTful APIs to retrieve optional or required values from the query string.
 @PathVariable - The @PathVariable annotation in Spring is used to extract values from the URI path and bind them directly
 to method parameters in a controller. It’s commonly used in RESTful applications where parts of the URL path represent
 resource identifiers, making it ideal for accessing dynamic data directly from URLs.
 @RequestBody - The @RequestBody annotation in Spring is used to bind the HTTP request body to a Java object. It allows
 you to directly map JSON, XML, or other formats in the request body into a Java object for easier handling
+@RequestPart - It is an annotation in Spring Framework used to bind a part of a multipart request to a method parameter.
+It is typically used when handling file uploads or when you need to process individual parts of a multipart HTTP request.
 
 @ModelAttribute - It is used to bind a method parameter or a method return value to a named model attribute, which can
 then be accessed in a view (like a JSP or Thymeleaf template). It's an optional attribute because Spring will try to bind
@@ -63,7 +70,7 @@ org.springframework.data.jpa.repository
 @Entity -It is used to mark a class as a JPA entity, meaning it maps to a table in a relational database. It allows the
 class to be managed by a JPA provider (like Hibernate) and defines that its instances can be persisted to and retrieved
 from the database.
-@GeneratedValue - It is used with the @Id annotation to specify how the primary key value of an entity should be automatically
+@GenerateValue - It is used with the @Id annotation to specify how the primary key value of an entity should be automatically
 generated. This annotation is part of the Java Persistence API (JPA) and is commonly used with ORM frameworks like Hibernate.
 @Table - Specifies table details (name, schema, catalog).
 @Id - Marks the primary key field.
@@ -71,7 +78,18 @@ generated. This annotation is part of the Java Persistence API (JPA) and is comm
 @Column - Customizes column mapping for fields.
 @Transient - Marks a field as non-persistent (not mapped to a database column).
 @Embeddable - Indicates that a class can be embedded in an entity.
+jakarta.persistence
+@Lob - annotation is used to specify that a persistent property or field should be mapped to a Large
+Object (LOB) in the database. It is typically used for storing large binary data (like images, videos, files) or large
+text data (like JSON strings, XML, or long descriptions).
 
 @Query - annotation in Spring Data JPA is used to define custom JPQL (Java Persistence Query Language) or SQL queries
 directly within a repository interface method. It provides a way to override the default query derivation mechanism and
 create more complex or specific queries.
+
+com.fasterxml.jackson.annotation
+@JsonFormat - annotation in Spring (from the Jackson library) is used to customize how Java objects are serialized
+into JSON or deserialized from JSON. It is commonly applied to date/time fields or other data types that require a
+specific format in the JSON output.
+
+
