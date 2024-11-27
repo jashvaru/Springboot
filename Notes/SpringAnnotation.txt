@@ -93,3 +93,10 @@ into JSON or deserialized from JSON. It is commonly applied to date/time fields 
 specific format in the JSON output.
 
 
+Aspect annotation
+@Aspect -
+@Before -
+@After -
+@AfterThrowing -
+@AfterReturning -
+@Around -
