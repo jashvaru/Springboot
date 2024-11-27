@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class PerformanceMetricsAspect {
 
-    private static final Logger log = LoggerFactory.getLogger(LoggingAspect.class);
+    private static final Logger log = LoggerFactory.getLogger(PerformanceMetricsAspect.class);
 
     @Around("execution(* com.jash.SpringAOP.service.JobPostService.*(..))")
     public Object performaceMetrics(ProceedingJoinPoint joinPoint) throws Throwable {
