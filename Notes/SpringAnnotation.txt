@@ -102,3 +102,6 @@ Aspect annotation
 @Around -
 
 Spring Security
+@EnableWebSecurity- It is used in Spring Security to enable and configure web security for a Spring application. It
+provides integration with the Spring Security framework to secure HTTP requests and implement features such as authentication,
+authorization, and other security mechanisms.
