@@ -15,6 +15,9 @@ public class UserService {
 
     public User saveUser(User user) {
         System.out.println("Insider save user");
+        if (user.getId() == null) {
+            throw new IllegalArgumentException("ID must not be null");
+        }
         return userRepo.save(user);
     }
 

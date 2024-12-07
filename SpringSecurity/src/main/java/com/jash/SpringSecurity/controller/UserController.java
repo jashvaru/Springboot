@@ -5,6 +5,7 @@ import com.jash.SpringSecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class UserController {
     UserService userService;
 
     @PostMapping("register")
-    public User registerUser(User user) {
+    public User registerUser(@RequestBody User user) {
         System.out.println("Insider User Controller");
         return userService.saveUser(user);
     }
