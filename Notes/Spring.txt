@@ -75,3 +75,11 @@ ORM (Object-Relational Mapping) is a programming technique used to interact with
 tables to classes and table rows to objects. ORM abstracts database operations into code-level objects, allowing developers
 to work with database data using object-oriented paradigms rather than raw SQL.
 
+Encryption & Decryption
+Symmetric cryptography is a type of encryption method where the same key is used for both encrypting and decrypting data.
+This key must be kept secret and shared securely between the parties involved in communication.
+
+Asymmetric cryptography is a type of encryption method that uses two different keys: a public key for encryption and a
+private key for decryption. These keys are mathematically related, but it is computationally infeasible to derive the
+private key from the public key.
+
