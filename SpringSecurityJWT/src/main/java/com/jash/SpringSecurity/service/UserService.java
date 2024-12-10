@@ -18,8 +18,8 @@ public class UserService {
 
     public User saveUser(User user) {
         System.out.println("Insider save user");
-        if (user.getId() == null) {
-            throw new IllegalArgumentException("ID must not be null");
+        if (user.getUsername() == null) {
+            throw new IllegalArgumentException("Username must not be null");
         }
 
         user.setPassword(encoder.encode(user.getPassword()));
