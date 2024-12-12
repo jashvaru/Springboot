@@ -1,5 +1,6 @@
 package com.jash.SpringSecurity.config;
 
+import com.jash.SpringSecurity.service.MyUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
@@ -27,7 +28,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
     @Autowired
-    UserDetailsService userDetailsService;
+    MyUserService userDetailsService;
 
     @Autowired
     private JwtFilter jwtFilter;

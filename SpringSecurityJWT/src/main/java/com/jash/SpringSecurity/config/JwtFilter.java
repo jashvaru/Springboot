@@ -1,6 +1,7 @@
 package com.jash.SpringSecurity.config;
 
 import com.jash.SpringSecurity.service.JwtService;
+import com.jash.SpringSecurity.service.MyUserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -40,7 +41,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
         if(userName != null && SecurityContextHolder.getContext().getAuthentication()==null){
 
-            UserDetails userDetails = context.getBean(UserDetailsService.class).loadUserByUsername(userName);
+            UserDetails userDetails = context.getBean(MyUserService.class).loadUserByUsername(userName);
 
             if(jwtService.validateToken(token, userDetails)){
                 UsernamePasswordAuthenticationToken authToken =
