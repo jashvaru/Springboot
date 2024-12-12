@@ -1,11 +1,11 @@
 package com.jash.SpringSecurity.service;
 
 
-import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.KeyGenerator;
@@ -18,11 +18,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class JWTService {
+public class JwtService {
 
     String secretKey;
 
-    public JWTService() {
+    public JwtService() {
         secretKey = generateSecretKey();
     }
 
@@ -54,5 +54,13 @@ public class JWTService {
         byte[] keyBytes = Decoders.BASE64.decode(secretKey);
         return Keys.hmacShaKeyFor(keyBytes);
 
+    }
+
+    public String extractUserName(String token) {
+        return "";
+    }
+
+    public boolean validateToken(String token, UserDetails userDetails) {
+        return false;
     }
 }

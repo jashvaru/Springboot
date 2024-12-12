@@ -1,7 +1,7 @@
 package com.jash.SpringSecurity.controller;
 
 import com.jash.SpringSecurity.model.User;
-import com.jash.SpringSecurity.service.JWTService;
+import com.jash.SpringSecurity.service.JwtService;
 import com.jash.SpringSecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,7 +24,7 @@ public class UserController {
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private JWTService jwtService;
+    private JwtService jwtService;
 
     @PostMapping("register")
     public User registerUser(@RequestBody User user) {
