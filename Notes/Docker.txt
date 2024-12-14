@@ -1,0 +1,16 @@
+What is Docker?
+Docker is an open-source platform designed to simplify the creation, deployment, and management of applications by using
+containerization technology. Docker enables developers to package applications and their dependencies into lightweight,
+portable containers that can run consistently across various environments.
+
+1.Docker Engine
+2.Docker Image
+3.Docker Container
+4.Docker Hub
+5.Docker Compose
+6.Docker File
+
+A Docker container is created from a Docker image.
+Analogy:
+Think of a Docker image as a recipe (instructions for creating something) and the Docker container as the dish prepared
+from that recipe.
