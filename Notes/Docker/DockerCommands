@@ -21,3 +21,7 @@ your local machine. This includes images that have been pulled from a registry o
 -docker search [OPTIONS] TERM - This is used to search for Docker images on the Docker Hub or any other configured
 registry. It returns a list of images matching the search term, along with metadata such as description, stars, and
 whether the image is official.
+
+-docker pull [OPTIONS] NAME[:TAG|@DIGEST] - This is used to download a Docker image from a remote registry (e.g., Docker
+Hub or a private registry) to your local machine. This command ensures that you have the specified image locally before
+you can use it.
