@@ -25,3 +25,10 @@ whether the image is official.
 -docker pull [OPTIONS] NAME[:TAG|@DIGEST] - This is used to download a Docker image from a remote registry (e.g., Docker
 Hub or a private registry) to your local machine. This command ensures that you have the specified image locally before
 you can use it.
+
+-docker create [OPTIONS] IMAGE [COMMAND] [ARG...] - This is used to create a new container from a specified image without
+starting it. This is useful when you want to set up a container with specific configurations before starting it.
+
+-docker start [OPTIONS] CONTAINER [CONTAINER...] - This is used to start one or more stopped containers. It allows you
+ to run a container that has already been created (using docker create or docker run).
+
