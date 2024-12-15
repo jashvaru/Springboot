@@ -7,3 +7,13 @@ environment variables, etc.
 
 -docker ps -a [OPTIONS] - The docker ps -a command is used to list all containers on your system, including those that
 are currently running, stopped, or exited. This is particularly useful for checking the status and history of containers.
+
+-docker images [OPTIONS] [REPOSITORY[:TAG]] - The docker images command is used to list all the Docker images stored on
+your local machine. This includes images that have been pulled from a registry or built locally.
+
+-docker rm [OPTIONS] CONTAINER [CONTAINER...] - This command removes one or more containers from your system.
+-f or --force: Force removal of a running container by stopping it first.
+-v or --volumes: Remove any volumes associated with the container.
+
+docker rmi [OPTIONS] IMAGE [IMAGE...] - This command removes one or more Docker images from your system.
+-f or --force: Force the removal of an image, even if it is being used by stopped containers.
