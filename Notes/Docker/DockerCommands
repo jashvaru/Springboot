@@ -15,5 +15,9 @@ your local machine. This includes images that have been pulled from a registry o
 -f or --force: Force removal of a running container by stopping it first.
 -v or --volumes: Remove any volumes associated with the container.
 
-docker rmi [OPTIONS] IMAGE [IMAGE...] - This command removes one or more Docker images from your system.
+-docker rmi [OPTIONS] IMAGE [IMAGE...] - This command removes one or more Docker images from your system.
 -f or --force: Force the removal of an image, even if it is being used by stopped containers.
+
+-docker search [OPTIONS] TERM - This is used to search for Docker images on the Docker Hub or any other configured
+registry. It returns a list of images matching the search term, along with metadata such as description, stars, and
+whether the image is official.
