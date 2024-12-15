@@ -32,3 +32,7 @@ starting it. This is useful when you want to set up a container with specific co
 -docker start [OPTIONS] CONTAINER [CONTAINER...] - This is used to start one or more stopped containers. It allows you
  to run a container that has already been created (using docker create or docker run).
 
+-docker stop [OPTIONS] CONTAINER [CONTAINER...] - This is used to stop one or more running containers. It sends a SIGTERM
+signal to the container, allowing it to gracefully shut down. If the container does not stop within a grace period
+(default: 10 seconds), it sends a SIGKILL signal to forcefully terminate it.
+
