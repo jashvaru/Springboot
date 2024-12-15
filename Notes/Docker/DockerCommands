@@ -1,0 +1,9 @@
+-docker pull [OPTIONS] NAME[:TAG|@DIGEST] - This command is used to download Docker images from a Docker registry,
+such as Docker Hub.
+
+-docker run [OPTIONS] IMAGE [COMMAND] [ARG...] - The docker run command is used to create and start a container from a
+Docker image. It can also include options to configure the container’s behavior, such as networking, volume mounting,
+environment variables, etc.
+
+-docker ps -a [OPTIONS] - The docker ps -a command is used to list all containers on your system, including those that
+are currently running, stopped, or exited. This is particularly useful for checking the status and history of containers.
