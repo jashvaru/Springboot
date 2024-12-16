@@ -1,6 +1,3 @@
--docker pull [OPTIONS] NAME[:TAG|@DIGEST] - This command is used to download Docker images from a Docker registry,
-such as Docker Hub.
-
 -docker run [OPTIONS] IMAGE [COMMAND] [ARG...] - The docker run command is used to create and start a container from a
 Docker image. It can also include options to configure the container’s behavior, such as networking, volume mounting,
 environment variables, etc.
@@ -40,4 +37,8 @@ signal to the container, allowing it to gracefully shut down. If the container d
 suspending all processes inside the container. This works by sending a SIGSTOP signal to the container’s processes,
 which effectively freezes them. Pausing a container is useful when you want to halt its activity temporarily without
 fully stopping it, and you can resume the container later.
+
+-docker run -it - This command is used to start a new Docker container in interactive mode with a pseudo-TTY
+(teletypewriter). This is useful when you want to interact with the container in real time, such as running commands
+inside the container or accessing a shell.
 
