@@ -71,4 +71,7 @@ and turn it into a reusable image.
 --change: Apply Dockerfile instructions (e.g., CMD, ENV) while creating the new image.
 --pause: Default is true. Pauses the container during the commit process to ensure a consistent state.
 
+-docker build [OPTIONS] -t IMAGE_NAME:TAG PATH - The docker build command is used to build a Docker image from a Dockerfile
+and a set of files
+
 
