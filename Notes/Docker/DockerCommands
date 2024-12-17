@@ -48,3 +48,9 @@ starting a new container instance.
 
 -docker cp [OPTIONS] SOURCE DESTINATION - The docker cp command is used to copy files or directories between a Docker
 container and the host machine. It works similarly to the Linux cp command but allows copying across the container boundary.
+
+-docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]] - The docker commit command is used to create a new Docker image
+from a container's current state. This is useful when you want to save changes made to a running or stopped container
+and turn it into a reusable image.
+
+
