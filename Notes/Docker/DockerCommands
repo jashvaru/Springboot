@@ -42,5 +42,9 @@ fully stopping it, and you can resume the container later.
 (teletypewriter). This is useful when you want to interact with the container in real time, such as running commands
 inside the container or accessing a shell.
 
--docker exec - This command allows you to run a command in a running Docker container. It is particularly useful for
-interacting with containers that are already up and running without stopping them or starting a new container instance.
+-docker exec [OPTIONS] CONTAINER COMMAND [ARG...] - This command allows you to run a command in a running Docker container.
+It is particularly useful for interacting with containers that are already up and running without stopping them or
+starting a new container instance.
+
+-docker cp [OPTIONS] SOURCE DESTINATION - The docker cp command is used to copy files or directories between a Docker
+container and the host machine. It works similarly to the Linux cp command but allows copying across the container boundary.
