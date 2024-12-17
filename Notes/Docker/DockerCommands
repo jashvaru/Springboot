@@ -45,6 +45,10 @@ inside the container or accessing a shell.
 -docker exec [OPTIONS] CONTAINER COMMAND [ARG...] - This command allows you to run a command in a running Docker container.
 It is particularly useful for interacting with containers that are already up and running without stopping them or
 starting a new container instance.
+-i: Keep STDIN open, allowing interactive input.
+-t: Allocate a pseudo-TTY (terminal), so the command runs in a terminal-like interface.
+-d: Run the command in the background (detached mode).
+--user: Specify a username or UID to run the command as.
 
 -docker cp [OPTIONS] SOURCE DESTINATION - The docker cp command is used to copy files or directories between a Docker
 container and the host machine. It works similarly to the Linux cp command but allows copying across the container boundary.
@@ -52,5 +56,9 @@ container and the host machine. It works similarly to the Linux cp command but a
 -docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]] - The docker commit command is used to create a new Docker image
 from a container's current state. This is useful when you want to save changes made to a running or stopped container
 and turn it into a reusable image.
+-a or --author: Specify the author of the new image.
+-m or --message: Add a commit message for the image.
+--change: Apply Dockerfile instructions (e.g., CMD, ENV) while creating the new image.
+--pause: Default is true. Pauses the container during the commit process to ensure a consistent state.
 
 
