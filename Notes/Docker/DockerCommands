@@ -1,6 +1,16 @@
 -docker run [OPTIONS] IMAGE [COMMAND] [ARG...] - The docker run command is used to create and start a container from a
 Docker image. It can also include options to configure the container’s behavior, such as networking, volume mounting,
-environment variables, etc.
+environment variables, etc.]
+-d	Run container in detached mode (in the background).
+-it	Allocate a terminal (interactive mode) for the container.
+--name	Assign a name to the container.
+-p	Map ports between host and container. -p [docker port]:[spring port]
+-v	Mount a volume (bind host directory to container).
+--rm	Automatically remove the container after it exits.
+--env or -e	Set environment variables inside the container.
+--network	Specify a network for the container.
+-w	Set a working directory inside the container.
+--entrypoint	Override the default entrypoint of the image.
 
 -docker ps -a [OPTIONS] - The docker ps -a command is used to list all containers on your system, including those that
 are currently running, stopped, or exited. This is particularly useful for checking the status and history of containers.
