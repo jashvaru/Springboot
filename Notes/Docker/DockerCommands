@@ -51,6 +51,7 @@ fully stopping it, and you can resume the container later.
 -docker run -it - This command is used to start a new Docker container in interactive mode with a pseudo-TTY
 (teletypewriter). This is useful when you want to interact with the container in real time, such as running commands
 inside the container or accessing a shell.
+-docker run -p [local host port]:[docker container port] image_name
 
 -docker exec [OPTIONS] CONTAINER COMMAND [ARG...] - This command allows you to run a command in a running Docker container.
 It is particularly useful for interacting with containers that are already up and running without stopping them or
