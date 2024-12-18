@@ -14,8 +14,13 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @GetMapping("/students")
+    @GetMapping(value = "/students", produces = "application/json")
     public List<Student> getStudents() {
         return studentService.getAllStudents();
+    }
+
+    @GetMapping(value = "/hello")
+    public String hello() {
+        return "Hello Student Docker";
     }
 }

@@ -1,10 +1,12 @@
 package com.jash.SpringStudentAppDocker.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
 @Table(name = "STUDENT_DOCKER")
+@Data
 public class Student {
 
     @Id

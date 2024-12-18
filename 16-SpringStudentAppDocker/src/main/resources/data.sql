@@ -1,0 +1,4 @@
+/*
+INSERT INTO STUDENT_DOCKER (name, age) VALUES ('Alice', 20);
+INSERT INTO STUDENT_DOCKER (name, age) VALUES ('Bob', 22);
+INSERT INTO STUDENT_DOCKER (name, age) VALUES ('Charlie', 25);*/
