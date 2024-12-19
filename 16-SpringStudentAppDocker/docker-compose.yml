@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: jv
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: jash
+    ports:
+      - "5433:5432"
+
+
+
+
