@@ -9,9 +9,9 @@ services:
     environment:
       POSTGRES_USER: jv
       POSTGRES_PASSWORD: 1234
-      POSTGRES_DB: jash
+      POSTGRES_DB: java
     ports:
-      - "5433:5432"
+      - "5433:5433"
 
 
 
