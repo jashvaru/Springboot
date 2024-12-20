@@ -75,4 +75,13 @@ and turn it into a reusable image.
 -docker build [OPTIONS] -t IMAGE_NAME:TAG PATH - The docker build command is used to build a Docker image from a Dockerfile
 and a set of files
 
+-docker-compose up --build - Docker Compose rebuilds your services and starts the containers defined in your
+docker-compose.yml file.
+
+-docker-compose down - This command is used to stop and remove containers, networks, and other resources created
+by docker-compose up
+
+-docker network ls - This command lists all Docker networks available on your system. These networks are used to
+facilitate communication between Docker containers and between containers and the host.
+
 
