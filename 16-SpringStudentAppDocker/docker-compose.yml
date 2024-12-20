@@ -2,11 +2,13 @@ services:
   app:
     build: .
     ports:
-      - "8090:8090"
+      - "8080:8080"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/java
       - SPRING_DATASOURCE_USERNAME=admin
       - SPRING_DATASOURCE_PASSWORD=1234
+    networks:
+      - s-network
 
   postgres:
     image: postgres:latest
@@ -16,6 +18,12 @@ services:
       POSTGRES_PASSWORD: 1234
     ports:
       - "5433:5433"
+    networks:
+      - s-network
+
+networks:
+  s-network:
+    driver: bridge
 
 
 
