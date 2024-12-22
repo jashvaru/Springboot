@@ -1,0 +1,13 @@
+ECS - Amazon Elastic Container Service (ECS) is a fully managed container orchestration service provided by Amazon Web
+Services (AWS). It allows you to run, scale, and manage containerized applications in the AWS cloud without having to
+manage the underlying infrastructure.
+
+Cluster - In Amazon ECS (Elastic Container Service), a cluster is a logical grouping of resources where your tasks and
+services run. It serves as the foundation for deploying and managing containerized applications in ECS.
+
+Task - In the context of Amazon ECS, a task is a single running instance of a task definition, which defines how
+containers should run, including the container image, CPU, memory, networking, and other settings.
+
+ECR - Amazon Elastic Container Registry (ECR) is a fully managed container registry provided by AWS that allows you
+to store, manage, and deploy container images securely. It works seamlessly with Amazon ECS, Amazon EKS, and other
+container orchestration tools.
