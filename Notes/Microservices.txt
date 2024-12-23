@@ -1,0 +1,4 @@
+Microservices - A monolithic architecture is a traditional software development approach where an application is built
+as a single, unified unit. It typically includes all the components—such as the user interface (UI), business logic,
+and data access layers—packaged together into one executable or deployable unit. This design is commonly used for
+applications that run on a single platform.
