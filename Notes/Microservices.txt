@@ -7,3 +7,4 @@ Microservices - It is a architecture is a modern software design approach where 
 independently deployable services that work together to deliver the application's overall functionality. Each service
 typically focuses on a specific business capability and communicates with other services through well-defined APIs,
 often using protocols like HTTP, REST, or messaging queues.
+
