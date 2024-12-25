@@ -8,3 +8,4 @@ independently deployable services that work together to deliver the application'
 typically focuses on a specific business capability and communicates with other services through well-defined APIs,
 often using protocols like HTTP, REST, or messaging queues.
 
+
