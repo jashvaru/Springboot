@@ -9,7 +9,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @Entity(name = "QuizQuestions")
-public class QuizQuestion {
+public class Question {
 
     @GeneratedValue
     @Id
