@@ -21,4 +21,8 @@ public class QuestionService {
         return quesRepo.findByCategory(category);
 
     }
+
+    public void addQues(Question question) {
+        quesRepo.save(question);
+    }
 }
