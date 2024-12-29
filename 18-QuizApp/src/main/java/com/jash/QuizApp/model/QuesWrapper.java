@@ -1,29 +1,29 @@
 package com.jash.QuizApp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
-@Entity(name = "Questions")
-public class Question {
 
-    public Question() {
-    }
+public class QuesWrapper {
 
-    @Id
-    @GeneratedValue
     private int id;
-
-    private String category;
-    private String difficultyLevel;
     private String question;
     private String option1;
     private String option2;
     private String option3;
     private String option4;
-    private String ans;
+
+    public QuesWrapper(int id, String question, String option1, String option2, String option3, String option4) {
+        this.id = id;
+        this.question = question;
+        this.option1 = option1;
+        this.option2 = option2;
+        this.option3 = option3;
+        this.option4 = option4;
+    }
 
     public int getId() {
         return id;
@@ -31,22 +31,6 @@ public class Question {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public String getDifficultyLevel() {
-        return difficultyLevel;
-    }
-
-    public void setDifficultyLevel(String difficultyLevel) {
-        this.difficultyLevel = difficultyLevel;
     }
 
     public String getQuestion() {
@@ -87,13 +71,5 @@ public class Question {
 
     public void setOption4(String option4) {
         this.option4 = option4;
-    }
-
-    public String getAns() {
-        return ans;
-    }
-
-    public void setAns(String ans) {
-        this.ans = ans;
     }
 }
