@@ -3,14 +3,18 @@ package com.jash.QuizApp.service;
 import com.jash.QuizApp.model.QuesWrapper;
 import com.jash.QuizApp.model.Question;
 import com.jash.QuizApp.model.Quiz;
+import com.jash.QuizApp.model.UserResponse;
 import com.jash.QuizApp.repo.QuesRepo;
 import com.jash.QuizApp.repo.QuizRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class QuizService {
@@ -41,5 +45,20 @@ public class QuizService {
             quesForUser.add(quesWrapper);
         }
         return quesForUser;
+    }
+
+    public Integer calcPoints(int id, List<UserResponse> userResponses) {
+        Optional<Quiz> quiz = quizRepo.findById(id);
+        List<Question> quesFromDb = quiz.get().getQuestions();
+        Map<Integer, String> quesAndAnsMap = quesFromDb.stream()
+                .collect(Collectors.toMap(Question::getId, Question::getAns));
+
+        Integer points = 0;
+        for (UserResponse userResponse : userResponses) {
+            if (userResponse.getUserAns().equals(quesAndAnsMap.get(userResponse.getId()))) {
+                points++;
+            }
+        }
+        return points;
     }
 }
