@@ -8,11 +8,11 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity(name = "QuizQuestions")
+@Entity(name = "Questions")
 public class Question {
 
-    @GeneratedValue
     @Id
+    @GeneratedValue
     private int id;
 
     private String category;
