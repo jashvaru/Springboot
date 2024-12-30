@@ -2,12 +2,16 @@ package com.jash.question_service.service;
 
 import com.jash.question_service.model.QuesWrapper;
 import com.jash.question_service.model.Question;
+import com.jash.question_service.model.UserResponse;
 import com.jash.question_service.repo.QuesRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
@@ -41,5 +45,22 @@ public class QuestionService {
             quesForUser.add(quesWrapper);
         }
         return quesForUser;
+    }
+
+
+    public Integer calcPointsForQuiz(List<UserResponse> userResponses) {
+        List<Question> quesFromDb = quesRepo.findAllByIdIn(userResponses.stream()
+                .map(UserResponse::getId)
+                .collect(Collectors.toList()));
+        Map<Integer, String> quesAndAnsMap = quesFromDb.stream()
+                .collect(Collectors.toMap(Question::getId, Question::getAns));
+
+        Integer points = 0;
+        for (UserResponse userResponse : userResponses) {
+            if (userResponse.getUserAns().equals(quesAndAnsMap.get(userResponse.getId()))) {
+                points++;
+            }
+        }
+        return points;
     }
 }

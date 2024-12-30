@@ -2,6 +2,7 @@ package com.jash.question_service.controller;
 
 import com.jash.question_service.model.QuesWrapper;
 import com.jash.question_service.model.Question;
+import com.jash.question_service.model.UserResponse;
 import com.jash.question_service.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -44,7 +45,12 @@ public class QuestionController {
     public ResponseEntity<List<QuesWrapper>> getQuesForQuiz(@RequestBody List<Integer> reqQuesIds) {
         return new ResponseEntity<>(questionService.getQuesForQuiz(reqQuesIds), HttpStatus.OK);
     }
+
     //CalcAns
+    @PostMapping("/calcPoints")
+    public ResponseEntity<Integer> calcPointsForQuiz(@RequestBody List<UserResponse> userResponse) {
+        return new ResponseEntity<>(questionService.calcPointsForQuiz(userResponse), HttpStatus.OK);
+    }
 
 
 }
