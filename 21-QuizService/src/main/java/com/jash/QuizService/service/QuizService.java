@@ -35,29 +35,14 @@ public class QuizService {
     }
 
     public List<QuesWrapper> getQuiz(int id) {
-        /*Optional<Quiz> quiz = quizRepo.findById(id);
-        List<Question> quesFromDb = quiz.get().getQuestions();*/
+        Optional<Quiz> quiz = quizRepo.findById(id);
+        List<Integer> quesIdFromDb = quiz.get().getQuestions();
         List<QuesWrapper> quesForUser = new ArrayList<>();
-        /*for(Question q: quesFromDb) {
-            QuesWrapper quesWrapper = new QuesWrapper(q.getId(), q.getQuestion(),
-                    q.getOption1(), q.getOption2(), q.getOption3(), q.getOption4());
-            quesForUser.add(quesWrapper);
-        }*/
+        quesForUser = quizFeignClient.getQuesForQuiz(quesIdFromDb).getBody();
         return quesForUser;
     }
 
     public Integer calcPoints(int id, List<UserResponse> userResponses) {
-        /*Optional<Quiz> quiz = quizRepo.findById(id);
-        List<Question> quesFromDb = quiz.get().getQuestions();
-        Map<Integer, String> quesAndAnsMap = quesFromDb.stream()
-                .collect(Collectors.toMap(Question::getId, Question::getAns));
-*/
-        Integer points = 0;
-        /*for (UserResponse userResponse : userResponses) {
-            if (userResponse.getUserAns().equals(quesAndAnsMap.get(userResponse.getId()))) {
-                points++;
-            }
-        }*/
-        return points;
+        return quizFeignClient.calcPointsForQuiz(userResponses).getBody();
     }
 }

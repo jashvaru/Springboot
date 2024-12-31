@@ -19,7 +19,7 @@ public interface QuizFeignClient {
     @PostMapping("/questions/generate")
     public ResponseEntity<List<Integer>> generateQues(@RequestParam String category, @RequestParam int numQ);
 
-    @GetMapping("/questions/get")
+    @PostMapping("/questions/get")
     public ResponseEntity<List<QuesWrapper>> getQuesForQuiz(@RequestBody List<Integer> reqQuesIds);
 
     @PostMapping("/questions/calcPoints")

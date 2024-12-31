@@ -41,7 +41,7 @@ public class QuestionController {
     }
 
     //getQuiz
-    @GetMapping("/get")
+    @PostMapping("/get")
     public ResponseEntity<List<QuesWrapper>> getQuesForQuiz(@RequestBody List<Integer> reqQuesIds) {
         return new ResponseEntity<>(questionService.getQuesForQuiz(reqQuesIds), HttpStatus.OK);
     }
