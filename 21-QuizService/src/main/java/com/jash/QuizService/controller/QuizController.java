@@ -1,5 +1,6 @@
 package com.jash.QuizService.controller;
 
+import com.jash.QuizService.model.CreateQuizDto;
 import com.jash.QuizService.model.QuesWrapper;
 import com.jash.QuizService.model.UserResponse;
 import com.jash.QuizService.service.QuizService;
@@ -18,8 +19,9 @@ public class QuizController {
     QuizService quizService;
 
     @PostMapping("/create")
-    public ResponseEntity<String> createQuiz(@RequestParam String category, @RequestParam int numQ, @RequestParam String title) {
-        return new ResponseEntity<>(quizService.createQuiz(category, numQ, title), HttpStatus.OK);
+    public ResponseEntity<String> createQuiz(@RequestBody CreateQuizDto createQuizDto) {
+        return new ResponseEntity<>(quizService.createQuiz(createQuizDto.getCategory(),
+                createQuizDto.getNumQ(), createQuizDto.getTitle()), HttpStatus.OK);
     }
 
     @GetMapping("/get")
