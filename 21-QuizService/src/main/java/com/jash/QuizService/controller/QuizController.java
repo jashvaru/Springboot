@@ -33,5 +33,4 @@ public class QuizController {
     public ResponseEntity<Integer> submitQuiz(@PathVariable int id, @RequestBody List<UserResponse> userResponses) {
         return new ResponseEntity<>(quizService.calcPoints(id, userResponses), HttpStatus.OK);
     }
-
 }
